@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+    <!-- ADDING CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+    <!-- END -->
+</head>
+<body>
+       {% if user.is_authenticated %}
+    <h3>Welcome to this page, {{user.username}}</h3>
+        {% else %}
+    <h1>Welcome page </h1>
+        {% endif %}
+    <!-- <h3> my name is {{features.details}} and i offered {{features.details}}</h3> -->
+
+    a
+    <!-- <h1>Input your text below</h1>
+    <form method="POST" action="counter">
+        {% csrf_token %}
+        <textarea name="text" id="" cols="100" rows="25" name="text"></textarea>
+        <p></p>
+        <input type="submit" />
+    </form> -->
+</body>
+</html>
